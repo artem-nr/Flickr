@@ -1,0 +1,17 @@
+ext {
+    javaVersion = JavaVersion.VERSION_1_8
+
+    jvmTargetVersion = '1.8'
+    daggerVersion = '2.44.2'
+
+    comSquareupOkhttp3OkhttpVersion = '4.9.3'
+    comSquareupRetrofit2RetrofitVersion = '2.9.0'
+
+    daggerDependency = "com.google.dagger:dagger:$daggerVersion"
+    kaptDaggerDependency = "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    okhttp3Dependency = "com.squareup.okhttp3:okhttp:$comSquareupOkhttp3OkhttpVersion"
+    retrofit2AdapterRxjava2Dependency = "com.squareup.retrofit2:adapter-rxjava2:$comSquareupRetrofit2RetrofitVersion"
+    retrofit2ConverterGsonDependency = "com.squareup.retrofit2:converter-gson:$comSquareupRetrofit2RetrofitVersion"
+    retrofit2RetrofitDependency = "com.squareup.retrofit2:retrofit:$comSquareupRetrofit2RetrofitVersion"
+}

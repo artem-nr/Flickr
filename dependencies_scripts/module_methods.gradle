@@ -1,0 +1,56 @@
+apply from: "$project.rootDir/dependencies_scripts/dependencies.gradle"
+apply from: "$project.rootDir/dependencies_scripts/config_values.gradle"
+
+ext {
+
+    applyDagger = { module ->
+        module.dependencies {
+            implementation daggerDependency
+            kapt kaptDaggerDependency
+        }
+    }
+
+    applyNetwork = { module ->
+        module.dependencies {
+            implementation okhttp3Dependency
+            implementation retrofit2AdapterRxjava2Dependency
+            implementation retrofit2ConverterGsonDependency
+            implementation retrofit2RetrofitDependency
+        }
+    }
+
+    applyKotlin = { module ->
+        module.configure(module) {
+            apply plugin: 'org.jetbrains.kotlin.android'
+            apply plugin: 'kotlin-kapt'
+        }
+    }
+
+    applyModuleSettings = { module ->
+        module.configure(module) {
+            apply plugin: 'com.android.library'
+
+            android {
+                compileSdkVersion androidCompileSdkVersion
+
+                defaultConfig {
+                    minSdkVersion androidMinSdkVersion
+                    targetSdkVersion androidTargetSdkVersion
+                    versionName androidVersionName
+                    versionCode = androidVersionCode
+                }
+
+                buildTypes {
+                    release {
+                        minifyEnabled false
+                    }
+                }
+
+                compileOptions {
+                    sourceCompatibility javaVersion
+                    targetCompatibility javaVersion
+                }
+            }
+        }
+    }
+}

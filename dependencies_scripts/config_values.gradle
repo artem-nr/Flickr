@@ -1,0 +1,8 @@
+ext {
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 33
+    androidCompileSdkVersion = 33
+    androidVersionName = "1.0"
+    androidVersionCode = 1
+    androidApplicationId = "com.pet.art.flickrapp"
+}
