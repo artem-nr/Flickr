@@ -2,8 +2,8 @@ plugins {
     id 'com.android.application'
 }
 
-apply from: "$project.rootDir/dependencies_scripts/module_methods.gradle"
-apply from: "$project.rootDir/dependencies_scripts/config_values.gradle"
+apply from: "$project.rootDir/dependencies_config/module_methods.gradle"
+apply from: "$project.rootDir/dependencies_config/config_values.gradle"
 applyKotlin(this)
 applyDagger(this)
 

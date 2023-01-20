@@ -1,5 +1,5 @@
-apply from: "$project.rootDir/dependencies_scripts/dependencies.gradle"
-apply from: "$project.rootDir/dependencies_scripts/config_values.gradle"
+apply from: "$project.rootDir/dependencies_config/dependencies.gradle"
+apply from: "$project.rootDir/dependencies_config/config_values.gradle"
 
 ext {
 
