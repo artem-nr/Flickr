@@ -3,6 +3,7 @@ apply from: "$project.rootDir/dependencies_config/module_methods.gradle"
 applyModuleSettings(this)
 applyKotlin(this)
 applyDagger(this)
+applyNetwork(this)
 
 dependencies {
 
