@@ -11,4 +11,9 @@ class FlickrApp : Application() {
             .application(this)
             .build()
     }
+
+    override fun onCreate() {
+        super.onCreate()
+        appComponent.inject(this)
+    }
 }

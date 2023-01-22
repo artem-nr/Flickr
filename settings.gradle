@@ -16,3 +16,4 @@ rootProject.name = "Flickr App"
 include ':app'
 include ':network'
 include ':core'
+include ':flickr_feature'
